@@ -1,14 +1,14 @@
 //
-//  IconViewController.swift
+//  ArtworkViewController.swift
 //  Modify
 //
-//  Created by Daniel on 17/3/28.
+//  Created by Daniel on 2017/3/28.
 //  Copyright © 2017年 Daniel. All rights reserved.
 //
 
 import Cocoa
 
-class IconViewController: NSViewController {
+class ArtworkViewController: ContentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

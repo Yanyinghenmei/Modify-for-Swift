@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,17 +20,17 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="362"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="contentRect" x="196" y="240" width="600" height="500"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="362"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="F6A-eg-ciF">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="362"/>
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="500"/>
                         <subviews>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-a9-NHh" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="-1" y="274" width="121" height="44"/>
+                                <rect key="frame" x="-1" y="412" width="121" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="coT-nA-BhA"/>
                                 </constraints>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="fHY-0n-g7y" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="318" width="120" height="44"/>
+                                <rect key="frame" x="0.0" y="456" width="120" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="opj-jh-RsJ"/>
                                 </constraints>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="K4V-Hq-Q7r" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="-1" y="230" width="121" height="44"/>
+                                <rect key="frame" x="-1" y="368" width="121" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Son-e3-7o1"/>
                                 </constraints>
@@ -84,8 +84,15 @@
                             <constraint firstItem="K4V-Hq-Q7r" firstAttribute="width" secondItem="fHY-0n-g7y" secondAttribute="width" id="upX-qx-BTM"/>
                         </constraints>
                     </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="w3R-Cj-IZP">
+                        <rect key="frame" x="120" y="0.0" width="480" height="500"/>
+                    </customView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="w3R-Cj-IZP" firstAttribute="leading" secondItem="F6A-eg-ciF" secondAttribute="trailing" id="CVl-pP-mXs"/>
+                    <constraint firstItem="w3R-Cj-IZP" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="EzA-LZ-8FU"/>
+                    <constraint firstAttribute="bottom" secondItem="w3R-Cj-IZP" secondAttribute="bottom" id="W07-zw-8eF"/>
+                    <constraint firstAttribute="trailing" secondItem="w3R-Cj-IZP" secondAttribute="trailing" id="aBu-26-aBJ"/>
                     <constraint firstItem="F6A-eg-ciF" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="ejr-Lx-bJM"/>
                     <constraint firstItem="F6A-eg-ciF" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="nk3-Bn-u3X"/>
                     <constraint firstAttribute="bottom" secondItem="F6A-eg-ciF" secondAttribute="bottom" id="tep-vf-9D5"/>
@@ -96,5 +103,10 @@
             </connections>
             <point key="canvasLocation" x="139" y="116"/>
         </window>
+        <viewController id="Ptm-Hf-KnM" customClass="ContainerViewController" customModule="Modify" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="w3R-Cj-IZP" id="kKH-Ky-vP7"/>
+            </connections>
+        </viewController>
     </objects>
 </document>

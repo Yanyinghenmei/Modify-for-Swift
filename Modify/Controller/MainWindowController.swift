@@ -28,9 +28,6 @@ class MainWindowController: NSWindowController {
         setColor(btn: artworkBtn, color: NSColor.white)
         setColor(btn: defaultBtn, color: NSColor.white)
         
-        let iconVC = IconViewController(nibName: "IconViewController", bundle: nil)
-        iconVC?.view.frame = NSRect(x: 120, y: 0, width: (self.window?.contentView?.frame.size.width)!, height: (self.window?.contentView?.frame.size.height)!)
-        self.window?.contentView?.addSubview((iconVC?.view)!)
     }
     
     func setColor(btn:NSButton, color:NSColor) {
