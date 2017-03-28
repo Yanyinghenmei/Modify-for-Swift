@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="Modify" customModuleProvider="target">
+            <connections>
+                <outlet property="artworkBtn" destination="hZQ-a9-NHh" id="VKr-GR-QoJ"/>
+                <outlet property="defaultBtn" destination="K4V-Hq-Q7r" id="ScR-AO-q3a"/>
+                <outlet property="iconBtn" destination="fHY-0n-g7y" id="oAL-Nw-dzg"/>
+                <outlet property="leftView" destination="F6A-eg-ciF" id="9r2-0X-BQe"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="362"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="362"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="F6A-eg-ciF">
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="362"/>
+                        <subviews>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-a9-NHh" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="274" width="121" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="coT-nA-BhA"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="Artwork" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="hs5-qZ-b2e">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnClick:" target="-2" id="UJk-o1-mgc"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="fHY-0n-g7y" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="318" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="opj-jh-RsJ"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="Icons" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="LUp-6b-7hq">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnClick:" target="-2" id="zTR-BD-TNi"/>
+                                </connections>
+                            </button>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="K4V-Hq-Q7r" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="230" width="121" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Son-e3-7o1"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" title="Default" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="RnA-i2-xEP">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system" size="16"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="btnClick:" target="-2" id="fsv-yN-xdO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fHY-0n-g7y" firstAttribute="leading" secondItem="F6A-eg-ciF" secondAttribute="leading" id="3rt-3S-RJF"/>
+                            <constraint firstItem="hZQ-a9-NHh" firstAttribute="width" secondItem="fHY-0n-g7y" secondAttribute="width" id="59G-y0-3EK"/>
+                            <constraint firstAttribute="trailing" secondItem="fHY-0n-g7y" secondAttribute="trailing" id="6sG-xq-a8v"/>
+                            <constraint firstItem="hZQ-a9-NHh" firstAttribute="top" secondItem="fHY-0n-g7y" secondAttribute="bottom" id="8jp-QN-CXt"/>
+                            <constraint firstItem="K4V-Hq-Q7r" firstAttribute="centerX" secondItem="fHY-0n-g7y" secondAttribute="centerX" id="8rl-t0-nX0"/>
+                            <constraint firstItem="fHY-0n-g7y" firstAttribute="top" secondItem="F6A-eg-ciF" secondAttribute="top" id="FG5-Uj-xB2"/>
+                            <constraint firstItem="K4V-Hq-Q7r" firstAttribute="top" secondItem="hZQ-a9-NHh" secondAttribute="bottom" id="GBz-Yo-r0F"/>
+                            <constraint firstItem="K4V-Hq-Q7r" firstAttribute="height" secondItem="fHY-0n-g7y" secondAttribute="height" id="N9Q-RD-LZ1"/>
+                            <constraint firstAttribute="width" constant="120" id="aRa-Hz-pbn"/>
+                            <constraint firstItem="hZQ-a9-NHh" firstAttribute="centerX" secondItem="fHY-0n-g7y" secondAttribute="centerX" id="kte-OQ-MhS"/>
+                            <constraint firstItem="hZQ-a9-NHh" firstAttribute="height" secondItem="fHY-0n-g7y" secondAttribute="height" id="tLx-oh-wQz"/>
+                            <constraint firstItem="K4V-Hq-Q7r" firstAttribute="width" secondItem="fHY-0n-g7y" secondAttribute="width" id="upX-qx-BTM"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F6A-eg-ciF" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="ejr-Lx-bJM"/>
+                    <constraint firstItem="F6A-eg-ciF" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="nk3-Bn-u3X"/>
+                    <constraint firstAttribute="bottom" secondItem="F6A-eg-ciF" secondAttribute="bottom" id="tep-vf-9D5"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="116"/>
+        </window>
+    </objects>
+</document>
