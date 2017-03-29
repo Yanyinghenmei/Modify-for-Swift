@@ -20,21 +20,39 @@ class DragDropView: NSView {
     }
     
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
-        if (sender.draggedImage() != nil) {
-            return .move
-        } else {
-            return .copy
+        
+        let pasteBoard = sender.draggingPasteboard()
+        if (pasteBoard.types?.contains(NSFilenamesPboardType))! {
+            let list = pasteBoard.propertyList(forType: NSFilenamesPboardType) as! Array<Any>
+            let first:String = list.first as! String
+            
+            if first.hasSuffix("png") ||
+                first.hasSuffix("jpg") {
+                return .copy
+            }
+            NSLog("%@", first)
         }
+        return .move
     }
     
     // 松开鼠标的时候
     override func prepareForDragOperation(_ sender: NSDraggingInfo) -> Bool {
         // 获取拖动数据中的剪贴板
-        let pastBoard = sender.draggingPasteboard()
-        
+        let pasteBoard = sender.draggingPasteboard()
+        if (pasteBoard.types?.contains(NSFilenamesPboardType))! {
+            let list = pasteBoard.propertyList(forType: NSFilenamesPboardType) as! Array<Any>
+            let first:String = list.first as! String
+            
+            // 如果是png
+            if first.hasSuffix("png") ||
+                first.hasSuffix("jpg") {
+                let fileUrl = NSURL.fileURL(withPath: first)
+                let image = NSImage.init(contentsOf: fileUrl)
+                NSLog("%@", first)
+            }
+            
+        }
         // 从剪贴板获取想要的文件链接数组
-        
-        let list = pastBoard.propertyList(forType: NSFilenamesPboardType)
         
         
         return true
