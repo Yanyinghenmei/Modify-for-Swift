@@ -9,6 +9,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController" customModule="Modify" customModuleProvider="target">
             <connections>
                 <outlet property="artworkBtn" destination="hZQ-a9-NHh" id="VKr-GR-QoJ"/>
+                <outlet property="containerController" destination="Ptm-Hf-KnM" id="jnm-Ry-Pge"/>
                 <outlet property="defaultBtn" destination="K4V-Hq-Q7r" id="ScR-AO-q3a"/>
                 <outlet property="iconBtn" destination="fHY-0n-g7y" id="oAL-Nw-dzg"/>
                 <outlet property="leftView" destination="F6A-eg-ciF" id="9r2-0X-BQe"/>
@@ -20,17 +21,17 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="480" height="362"/>
+            <rect key="contentRect" x="196" y="240" width="600" height="500"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="362"/>
+                <rect key="frame" x="0.0" y="0.0" width="600" height="500"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="F6A-eg-ciF">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="362"/>
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="500"/>
                         <subviews>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-a9-NHh" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="-1" y="274" width="121" height="44"/>
+                            <button tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-a9-NHh" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="412" width="121" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="coT-nA-BhA"/>
                                 </constraints>
@@ -39,11 +40,11 @@
                                     <font key="font" metaFont="system" size="16"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="btnClick:" target="-2" id="UJk-o1-mgc"/>
+                                    <action selector="tabBtnClick:" target="-2" id="LdC-WL-DIN"/>
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="fHY-0n-g7y" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="318" width="120" height="44"/>
+                                <rect key="frame" x="0.0" y="456" width="120" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="opj-jh-RsJ"/>
                                 </constraints>
@@ -52,11 +53,11 @@
                                     <font key="font" metaFont="system" size="16"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="btnClick:" target="-2" id="zTR-BD-TNi"/>
+                                    <action selector="tabBtnClick:" target="-2" id="mZX-uh-hpg"/>
                                 </connections>
                             </button>
-                            <button translatesAutoresizingMaskIntoConstraints="NO" id="K4V-Hq-Q7r" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="-1" y="230" width="121" height="44"/>
+                            <button tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="K4V-Hq-Q7r" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
+                                <rect key="frame" x="-1" y="368" width="121" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Son-e3-7o1"/>
                                 </constraints>
@@ -65,7 +66,7 @@
                                     <font key="font" metaFont="system" size="16"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="btnClick:" target="-2" id="fsv-yN-xdO"/>
+                                    <action selector="tabBtnClick:" target="-2" id="QNC-78-k6V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,8 +85,15 @@
                             <constraint firstItem="K4V-Hq-Q7r" firstAttribute="width" secondItem="fHY-0n-g7y" secondAttribute="width" id="upX-qx-BTM"/>
                         </constraints>
                     </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="w3R-Cj-IZP" customClass="DragDropView" customModule="Modify" customModuleProvider="target">
+                        <rect key="frame" x="120" y="0.0" width="480" height="500"/>
+                    </customView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="w3R-Cj-IZP" firstAttribute="leading" secondItem="F6A-eg-ciF" secondAttribute="trailing" id="CVl-pP-mXs"/>
+                    <constraint firstItem="w3R-Cj-IZP" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="EzA-LZ-8FU"/>
+                    <constraint firstAttribute="bottom" secondItem="w3R-Cj-IZP" secondAttribute="bottom" id="W07-zw-8eF"/>
+                    <constraint firstAttribute="trailing" secondItem="w3R-Cj-IZP" secondAttribute="trailing" id="aBu-26-aBJ"/>
                     <constraint firstItem="F6A-eg-ciF" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="ejr-Lx-bJM"/>
                     <constraint firstItem="F6A-eg-ciF" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="nk3-Bn-u3X"/>
                     <constraint firstAttribute="bottom" secondItem="F6A-eg-ciF" secondAttribute="bottom" id="tep-vf-9D5"/>
@@ -96,5 +104,10 @@
             </connections>
             <point key="canvasLocation" x="139" y="116"/>
         </window>
+        <viewController id="Ptm-Hf-KnM" customClass="ContainerViewController" customModule="Modify" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="w3R-Cj-IZP" id="kKH-Ky-vP7"/>
+            </connections>
+        </viewController>
     </objects>
 </document>

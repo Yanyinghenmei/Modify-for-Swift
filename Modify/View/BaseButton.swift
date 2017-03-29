@@ -41,5 +41,4 @@ class BaseButton: NSButton {
 
         // Drawing code here.
     }
-    
 }

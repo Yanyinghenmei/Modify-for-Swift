@@ -14,6 +14,7 @@ class MainWindowController: NSWindowController {
     @IBOutlet weak var iconBtn: BaseButton!
     @IBOutlet weak var artworkBtn: BaseButton!
     @IBOutlet weak var defaultBtn: BaseButton!
+    @IBOutlet var containerController: ContainerViewController!
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -27,10 +28,6 @@ class MainWindowController: NSWindowController {
         setColor(btn: iconBtn, color: NSColor.white)
         setColor(btn: artworkBtn, color: NSColor.white)
         setColor(btn: defaultBtn, color: NSColor.white)
-        
-        let iconVC = IconViewController(nibName: "IconViewController", bundle: nil)
-        iconVC?.view.frame = NSRect(x: 120, y: 0, width: (self.window?.contentView?.frame.size.width)!, height: (self.window?.contentView?.frame.size.height)!)
-        self.window?.contentView?.addSubview((iconVC?.view)!)
     }
     
     func setColor(btn:NSButton, color:NSColor) {
@@ -40,14 +37,16 @@ class MainWindowController: NSWindowController {
         btn.attributedTitle = mutableAttrStr
     }
     
-    @IBAction func btnClick(_ sender: BaseButton) {
-        self.iconBtn.isSelect = false
-        self.artworkBtn.isSelect = false
-        self.defaultBtn.isSelect = false
-        
-        sender.isSelect = true
+    @IBAction func tabBtnClick(_ sender: BaseButton) {
+        containerController.setCurrentIndex(index: sender.tag, block: {
+            
+            self.iconBtn.isSelect = false
+            self.artworkBtn.isSelect = false
+            self.defaultBtn.isSelect = false
+            
+            sender.isSelect = true
+        })
     }
-    
 }
 
 

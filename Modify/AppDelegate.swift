@@ -11,7 +11,7 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var mainWindowController:MainWindowController?
+    public var mainWindowController:MainWindowController?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -23,7 +23,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
 
