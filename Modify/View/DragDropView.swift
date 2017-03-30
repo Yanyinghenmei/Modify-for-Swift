@@ -9,11 +9,12 @@
 import Cocoa
 
 class DragDropView: NSView {
+    
+    weak var delegate:DragDropDelegate?
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        //NSColor.init(srgbRed: 241/255.00, green: 241/255.00, blue: 241/255.00, alpha: 1).set()
-        NSColor.red.set()
+        NSColor.init(srgbRed: 241/255.00, green: 241/255.00, blue: 241/255.00, alpha: 1).set()
         NSRectFill(dirtyRect)
         
         self.register(forDraggedTypes: [NSFilenamesPboardType])
@@ -24,13 +25,15 @@ class DragDropView: NSView {
         let pasteBoard = sender.draggingPasteboard()
         if (pasteBoard.types?.contains(NSFilenamesPboardType))! {
             let list = pasteBoard.propertyList(forType: NSFilenamesPboardType) as! Array<Any>
-            let first:String = list.first as! String
+            sender.numberOfValidItemsForDrop = list.count
             
-            if first.hasSuffix("png") ||
-                first.hasSuffix("jpg") {
-                return .copy
+            for index in 0..<list.count {
+                let path = list[index] as! String
+                if path.hasSuffix("png") ||
+                    path.hasSuffix("jpg") {
+                    return .copy
+                }
             }
-            NSLog("%@", first)
         }
         return .move
     }
@@ -41,21 +44,27 @@ class DragDropView: NSView {
         let pasteBoard = sender.draggingPasteboard()
         if (pasteBoard.types?.contains(NSFilenamesPboardType))! {
             let list = pasteBoard.propertyList(forType: NSFilenamesPboardType) as! Array<Any>
-            let first:String = list.first as! String
             
-            // 如果是png
-            if first.hasSuffix("png") ||
-                first.hasSuffix("jpg") {
-                let fileUrl = NSURL.fileURL(withPath: first)
-                let image = NSImage.init(contentsOf: fileUrl)
-                NSLog("%@", first)
+            var urlArr:Array<URL> = []
+            for index in 0..<list.count {
+                let path = list[index] as! String
+                
+                if path.hasSuffix("png") ||
+                    path.hasSuffix("jpg") {
+                    let imageUrl = URL.init(fileURLWithPath: path)
+                    urlArr.append(imageUrl)
+                }
             }
             
+            self.delegate?.prepareForDargUrlArray(urlArray: urlArr)
         }
-        // 从剪贴板获取想要的文件链接数组
-        
         
         return true
     }
     
 }
+
+protocol DragDropDelegate: class {
+    func prepareForDargUrlArray(urlArray:Array<URL>)
+}
+

@@ -9,11 +9,9 @@
 import Cocoa
 
 class ContentViewController: NSViewController {
-    
-    public func tabBtnClick(btn:NSButton) {
-        print(btn.tag)
-    }
 
+    public var urlArray:Array<URL>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.

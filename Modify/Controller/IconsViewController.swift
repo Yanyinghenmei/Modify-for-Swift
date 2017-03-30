@@ -9,9 +9,26 @@
 import Cocoa
 
 class IconsViewController: ContentViewController {
-
+    
+    @IBOutlet weak var messageView: NSView!
+    @IBOutlet weak var messageLabel: NSTextField!
+    
+    override var urlArray: Array<URL>? {
+        didSet{
+            if ((urlArray?.count)! > 1) {
+                self.messageView.isHidden = false
+                self.messageLabel.stringValue = "Just Drag One Image!"
+            } else {
+                
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+    }
+
+    @IBAction func closeMessageView(_ sender: Any) {
+        self.messageView.isHidden = true
     }
 }

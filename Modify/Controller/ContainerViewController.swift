@@ -8,13 +8,13 @@
 
 import Cocoa
 
-class ContainerViewController: NSViewController {
-
-    public var containerView:NSView?
-    var currentVC:NSViewController?
+class ContainerViewController: NSViewController, DragDropDelegate {
+    
+    var currentVC:ContentViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        (self.view as! DragDropView).delegate = self
         
         let iconVC = IconsViewController(nibName: "IconsViewController", bundle: nil)
         let artworkVC = ArtworkViewController(nibName: "ArtworkViewController", bundle: nil)
@@ -40,9 +40,14 @@ class ContainerViewController: NSViewController {
     public func setCurrentIndex(index num:NSInteger, block:@escaping ()->Void) {
         if currentVC! != self.childViewControllers[num] {
             self.transition(from: currentVC!, to: self.childViewControllers[num], options: [NSViewControllerTransitionOptions.init(rawValue: 0)], completionHandler: {
-                self.currentVC = self.childViewControllers[num]
+                self.currentVC = self.childViewControllers[num] as? ContentViewController
                 block()
             })
         }
+    }
+    
+    func prepareForDargUrlArray(urlArray: Array<URL>) {
+        currentVC?.urlArray = urlArray
+        print(urlArray)
     }
 }

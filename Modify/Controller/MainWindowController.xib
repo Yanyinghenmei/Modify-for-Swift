@@ -102,7 +102,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="139" y="116"/>
+            <point key="canvasLocation" x="135" y="111"/>
         </window>
         <viewController id="Ptm-Hf-KnM" customClass="ContainerViewController" customModule="Modify" customModuleProvider="target">
             <connections>
