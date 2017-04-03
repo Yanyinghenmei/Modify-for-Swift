@@ -32,7 +32,7 @@ class DragDropView: NSView {
             }
             NSLog("%@", first)
         }
-        return .move
+        return .move 
     }
     
     // 松开鼠标的时候
