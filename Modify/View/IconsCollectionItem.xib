@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="IconsCollectionItem" customModule="Modify" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="zuH-Mj-DN6" id="Qou-OY-QXS"/>
+                <outlet property="nameLabel" destination="jEZ-S9-ech" id="ZAT-eF-d8i"/>
+                <outlet property="sizeLabel" destination="5Cl-JE-vdX" id="Ci3-os-WC3"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zuH-Mj-DN6">
+                    <rect key="frame" x="38" y="68" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="zuH-Mj-DN6" secondAttribute="height" id="sPh-69-U8b"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="temp" id="sN1-SZ-7nW"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jEZ-S9-ech">
+                    <rect key="frame" x="37" y="40" width="51" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="a83-wn-JI2"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Icon-72" id="CSJ-8c-uxH">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5Cl-JE-vdX">
+                    <rect key="frame" x="44" y="25" width="37" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="WFL-8S-BAW"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="72x72" id="atG-WT-WVQ">
+                        <font key="font" metaFont="systemMedium" size="11"/>
+                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zuH-Mj-DN6" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="8pC-Lz-LRj"/>
+                <constraint firstItem="zuH-Mj-DN6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="DGE-bo-0DR"/>
+                <constraint firstItem="5Cl-JE-vdX" firstAttribute="top" secondItem="jEZ-S9-ech" secondAttribute="bottom" id="N7i-pV-xyY"/>
+                <constraint firstItem="jEZ-S9-ech" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="OJM-lQ-JTH"/>
+                <constraint firstItem="5Cl-JE-vdX" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="ScW-R3-9aL"/>
+                <constraint firstAttribute="bottom" secondItem="5Cl-JE-vdX" secondAttribute="bottom" constant="25" id="TSP-QQ-pgO"/>
+                <constraint firstItem="jEZ-S9-ech" firstAttribute="top" secondItem="zuH-Mj-DN6" secondAttribute="bottom" constant="10" id="a2o-kg-psw"/>
+            </constraints>
+            <point key="canvasLocation" x="-10" y="182"/>
+        </customView>
+        <collectionViewItem id="Thi-as-ziN" customClass="IconsCollectionItem" customModule="Modify" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="temp" width="50" height="50"/>
+    </resources>
+</document>
