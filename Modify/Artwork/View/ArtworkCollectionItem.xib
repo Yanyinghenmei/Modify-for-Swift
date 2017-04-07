@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ArtworkCollectionItem" customModule="Modify" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="OaE-77-AOc" id="YXb-fF-B6l"/>
+                <outlet property="nameLabel" destination="cv8-Xy-Vbz" id="Br8-W2-Jlo"/>
+                <outlet property="originalLabel" destination="cxH-M6-Izz" id="hgO-ub-Zha"/>
+                <outlet property="sizeLabel" destination="LLk-0N-Shs" id="mCk-J7-jXO"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-77-AOc">
+                    <rect key="frame" x="37" y="72" width="50" height="50"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="temp" id="FoM-Vi-QmQ"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cv8-Xy-Vbz">
+                    <rect key="frame" x="37" y="44" width="51" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="j5c-NR-Q2Z"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Icon-72" id="HM9-Lh-kEV">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LLk-0N-Shs">
+                    <rect key="frame" x="44" y="27" width="37" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="Btv-58-LNj"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="72x72" id="efH-s9-XcT">
+                        <font key="font" metaFont="systemMedium" size="11"/>
+                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cxH-M6-Izz">
+                    <rect key="frame" x="25" y="12" width="76" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="Ypg-Y7-WiV"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Original: @3x" id="jBW-Xk-IZp">
+                        <font key="font" metaFont="systemMedium" size="11"/>
+                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cxH-M6-Izz" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="7Ja-fa-24L"/>
+                <constraint firstItem="LLk-0N-Shs" firstAttribute="top" secondItem="cv8-Xy-Vbz" secondAttribute="bottom" constant="2" id="8NU-OZ-uYh"/>
+                <constraint firstAttribute="bottom" secondItem="cxH-M6-Izz" secondAttribute="bottom" constant="12" id="Iou-4a-pgm"/>
+                <constraint firstItem="OaE-77-AOc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="PBa-4U-HBF"/>
+                <constraint firstItem="cxH-M6-Izz" firstAttribute="top" secondItem="LLk-0N-Shs" secondAttribute="bottom" id="Tq5-2Q-tHm"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OaE-77-AOc" secondAttribute="trailing" constant="15" id="WaP-P1-I2i"/>
+                <constraint firstItem="LLk-0N-Shs" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="XC0-F2-IUR"/>
+                <constraint firstItem="OaE-77-AOc" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="cVc-me-MtE"/>
+                <constraint firstItem="cv8-Xy-Vbz" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="d5d-5c-tiE"/>
+                <constraint firstItem="cv8-Xy-Vbz" firstAttribute="top" secondItem="OaE-77-AOc" secondAttribute="bottom" constant="10" id="dao-JJ-xIb"/>
+                <constraint firstItem="OaE-77-AOc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="15" id="tXJ-YY-3fg"/>
+            </constraints>
+            <point key="canvasLocation" x="-30" y="131"/>
+        </customView>
+        <collectionViewItem id="uKk-k1-Fv4" customClass="ArtworkCollectionItem" customModule="Modify" customModuleProvider="target"/>
+    </objects>
+    <resources>
+        <image name="temp" width="50" height="50"/>
+    </resources>
+</document>

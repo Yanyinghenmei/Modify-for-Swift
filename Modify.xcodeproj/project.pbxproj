@@ -7,29 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		651432611E8BA75100C5373F /* DragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651432601E8BA75100C5373F /* DragDropView.swift */; };
 		652F0E401E9388EC00AEE6E5 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 652F0E3F1E9388EC00AEE6E5 /* Images.bundle */; };
 		652F0E5C1E93989000AEE6E5 /* icontypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 652F0E5B1E93989000AEE6E5 /* icontypes.plist */; };
-		652F0E5E1E939DE900AEE6E5 /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652F0E5D1E939DE900AEE6E5 /* ResourcesManager.swift */; };
 		6546FD091E89F69C00280AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546FD081E89F69C00280AFD /* AppDelegate.swift */; };
 		6546FD0B1E89F69C00280AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6546FD0A1E89F69C00280AFD /* Assets.xcassets */; };
 		6546FD0E1E89F69C00280AFD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6546FD0C1E89F69C00280AFD /* MainMenu.xib */; };
 		6546FD191E89F69C00280AFD /* ModifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546FD181E89F69C00280AFD /* ModifyTests.swift */; };
 		6546FD241E89F69C00280AFD /* ModifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546FD231E89F69C00280AFD /* ModifyUITests.swift */; };
-		6546FD381E8A3ACB00280AFD /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546FD371E8A3ACB00280AFD /* BaseButton.swift */; };
-		65D1C1841E8AAEB0008D8074 /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D1C1821E8AAEB0008D8074 /* MainWindowController.xib */; };
-		65D1C1861E8AAEE6008D8074 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1C1851E8AAEE6008D8074 /* ContainerViewController.swift */; };
-		65D1C1871E8AAFDD008D8074 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1C1811E8AAEB0008D8074 /* MainWindowController.swift */; };
-		65D1C1891E8AB543008D8074 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1C1881E8AB543008D8074 /* ContentViewController.swift */; };
-		65D1C18C1E8AB589008D8074 /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1C18A1E8AB589008D8074 /* IconsViewController.swift */; };
-		65D1C18D1E8AB589008D8074 /* IconsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D1C18B1E8AB589008D8074 /* IconsViewController.xib */; };
-		65D1C1901E8AB733008D8074 /* ArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1C18E1E8AB733008D8074 /* ArtworkViewController.swift */; };
-		65D1C1911E8AB733008D8074 /* ArtworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D1C18F1E8AB733008D8074 /* ArtworkViewController.xib */; };
-		65D1C1941E8AB743008D8074 /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D1C1921E8AB743008D8074 /* DefaultViewController.swift */; };
-		65D1C1951E8AB743008D8074 /* DefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65D1C1931E8AB743008D8074 /* DefaultViewController.xib */; };
-		65E9817E1E8CDFB7001F3CEE /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9817D1E8CDFB7001F3CEE /* MessageView.swift */; };
-		65F3F2801E9245390064494F /* IconsCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F3F27E1E9245390064494F /* IconsCollectionItem.swift */; };
-		65F3F2811E9245390064494F /* IconsCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65F3F27F1E9245390064494F /* IconsCollectionItem.xib */; };
+		65FB40E81E97775300BDC5BA /* IconsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40DD1E97775300BDC5BA /* IconsViewController.swift */; };
+		65FB40E91E97775300BDC5BA /* IconsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB40DE1E97775300BDC5BA /* IconsViewController.xib */; };
+		65FB40EB1E97775300BDC5BA /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40E11E97775300BDC5BA /* BaseButton.swift */; };
+		65FB40EC1E97775300BDC5BA /* DragDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40E21E97775300BDC5BA /* DragDropView.swift */; };
+		65FB40ED1E97775300BDC5BA /* IconsCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40E31E97775300BDC5BA /* IconsCollectionHeader.swift */; };
+		65FB40EE1E97775300BDC5BA /* IconsCollectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB40E41E97775300BDC5BA /* IconsCollectionHeader.xib */; };
+		65FB40EF1E97775300BDC5BA /* IconsCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40E51E97775300BDC5BA /* IconsCollectionItem.swift */; };
+		65FB40F01E97775300BDC5BA /* IconsCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB40E61E97775300BDC5BA /* IconsCollectionItem.xib */; };
+		65FB40F71E97777800BDC5BA /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40F31E97777800BDC5BA /* ContainerViewController.swift */; };
+		65FB40F81E97777800BDC5BA /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40F41E97777800BDC5BA /* ContentViewController.swift */; };
+		65FB40F91E97777800BDC5BA /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40F51E97777800BDC5BA /* MainWindowController.swift */; };
+		65FB40FA1E97777800BDC5BA /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB40F61E97777800BDC5BA /* MainWindowController.xib */; };
+		65FB40FF1E9777D400BDC5BA /* ArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB40FD1E9777D400BDC5BA /* ArtworkViewController.swift */; };
+		65FB41001E9777D400BDC5BA /* ArtworkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB40FE1E9777D400BDC5BA /* ArtworkViewController.xib */; };
+		65FB41051E9777FC00BDC5BA /* DefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB41031E9777FC00BDC5BA /* DefaultViewController.swift */; };
+		65FB41061E9777FC00BDC5BA /* DefaultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB41041E9777FC00BDC5BA /* DefaultViewController.xib */; };
+		65FB41081E97798300BDC5BA /* ResourcesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB41071E97798300BDC5BA /* ResourcesManager.swift */; };
+		65FB410B1E977E9400BDC5BA /* ArtworkCollectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB41091E977E9400BDC5BA /* ArtworkCollectionItem.swift */; };
+		65FB410C1E977E9400BDC5BA /* ArtworkCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65FB410A1E977E9400BDC5BA /* ArtworkCollectionItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		651432601E8BA75100C5373F /* DragDropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDropView.swift; sourceTree = "<group>"; };
+		650DF5021E95F72E0065FAC5 /* Modify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Modify.entitlements; sourceTree = "<group>"; };
 		652F0E3F1E9388EC00AEE6E5 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		652F0E5B1E93989000AEE6E5 /* icontypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = icontypes.plist; sourceTree = "<group>"; };
-		652F0E5D1E939DE900AEE6E5 /* ResourcesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesManager.swift; sourceTree = "<group>"; };
 		6546FD051E89F69C00280AFD /* Modify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Modify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6546FD081E89F69C00280AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6546FD0A1E89F69C00280AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,20 +67,25 @@
 		6546FD1F1E89F69C00280AFD /* ModifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6546FD231E89F69C00280AFD /* ModifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyUITests.swift; sourceTree = "<group>"; };
 		6546FD251E89F69C00280AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6546FD371E8A3ACB00280AFD /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
-		65D1C1811E8AAEB0008D8074 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		65D1C1821E8AAEB0008D8074 /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
-		65D1C1851E8AAEE6008D8074 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		65D1C1881E8AB543008D8074 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
-		65D1C18A1E8AB589008D8074 /* IconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
-		65D1C18B1E8AB589008D8074 /* IconsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconsViewController.xib; sourceTree = "<group>"; };
-		65D1C18E1E8AB733008D8074 /* ArtworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkViewController.swift; sourceTree = "<group>"; };
-		65D1C18F1E8AB733008D8074 /* ArtworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtworkViewController.xib; sourceTree = "<group>"; };
-		65D1C1921E8AB743008D8074 /* DefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
-		65D1C1931E8AB743008D8074 /* DefaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultViewController.xib; sourceTree = "<group>"; };
-		65E9817D1E8CDFB7001F3CEE /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
-		65F3F27E1E9245390064494F /* IconsCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsCollectionItem.swift; sourceTree = "<group>"; };
-		65F3F27F1E9245390064494F /* IconsCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconsCollectionItem.xib; sourceTree = "<group>"; };
+		65FB40DD1E97775300BDC5BA /* IconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsViewController.swift; sourceTree = "<group>"; };
+		65FB40DE1E97775300BDC5BA /* IconsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconsViewController.xib; sourceTree = "<group>"; };
+		65FB40E11E97775300BDC5BA /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		65FB40E21E97775300BDC5BA /* DragDropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragDropView.swift; sourceTree = "<group>"; };
+		65FB40E31E97775300BDC5BA /* IconsCollectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsCollectionHeader.swift; sourceTree = "<group>"; };
+		65FB40E41E97775300BDC5BA /* IconsCollectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconsCollectionHeader.xib; sourceTree = "<group>"; };
+		65FB40E51E97775300BDC5BA /* IconsCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsCollectionItem.swift; sourceTree = "<group>"; };
+		65FB40E61E97775300BDC5BA /* IconsCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconsCollectionItem.xib; sourceTree = "<group>"; };
+		65FB40F31E97777800BDC5BA /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		65FB40F41E97777800BDC5BA /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		65FB40F51E97777800BDC5BA /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		65FB40F61E97777800BDC5BA /* MainWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		65FB40FD1E9777D400BDC5BA /* ArtworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkViewController.swift; sourceTree = "<group>"; };
+		65FB40FE1E9777D400BDC5BA /* ArtworkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtworkViewController.xib; sourceTree = "<group>"; };
+		65FB41031E9777FC00BDC5BA /* DefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultViewController.swift; sourceTree = "<group>"; };
+		65FB41041E9777FC00BDC5BA /* DefaultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultViewController.xib; sourceTree = "<group>"; };
+		65FB41071E97798300BDC5BA /* ResourcesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesManager.swift; sourceTree = "<group>"; };
+		65FB41091E977E9400BDC5BA /* ArtworkCollectionItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkCollectionItem.swift; sourceTree = "<group>"; };
+		65FB410A1E977E9400BDC5BA /* ArtworkCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtworkCollectionItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,14 +145,16 @@
 		6546FD071E89F69C00280AFD /* Modify */ = {
 			isa = PBXGroup;
 			children = (
+				650DF5021E95F72E0065FAC5 /* Modify.entitlements */,
+				65FB40F21E97777800BDC5BA /* Base */,
+				65FB40DB1E97775300BDC5BA /* Icons */,
+				65FB40D61E97774D00BDC5BA /* Artwork */,
+				65FB40D11E97774500BDC5BA /* Default */,
 				652F0E3E1E9388EC00AEE6E5 /* Resources */,
-				65D1C1801E8AAE89008D8074 /* Controller */,
-				6546FD361E8A3AB600280AFD /* View */,
 				6546FD081E89F69C00280AFD /* AppDelegate.swift */,
 				6546FD0A1E89F69C00280AFD /* Assets.xcassets */,
 				6546FD0C1E89F69C00280AFD /* MainMenu.xib */,
 				6546FD0F1E89F69C00280AFD /* Info.plist */,
-				652F0E5D1E939DE900AEE6E5 /* ResourcesManager.swift */,
 			);
 			path = Modify;
 			sourceTree = "<group>";
@@ -168,31 +177,97 @@
 			path = ModifyUITests;
 			sourceTree = "<group>";
 		};
-		6546FD361E8A3AB600280AFD /* View */ = {
+		65FB40D11E97774500BDC5BA /* Default */ = {
 			isa = PBXGroup;
 			children = (
-				6546FD371E8A3ACB00280AFD /* BaseButton.swift */,
-				651432601E8BA75100C5373F /* DragDropView.swift */,
-				65E9817D1E8CDFB7001F3CEE /* MessageView.swift */,
-				65F3F27E1E9245390064494F /* IconsCollectionItem.swift */,
-				65F3F27F1E9245390064494F /* IconsCollectionItem.xib */,
+				65FB41011E9777FC00BDC5BA /* View */,
+				65FB41021E9777FC00BDC5BA /* Controller */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		65FB40D61E97774D00BDC5BA /* Artwork */ = {
+			isa = PBXGroup;
+			children = (
+				65FB40FB1E9777D400BDC5BA /* View */,
+				65FB40FC1E9777D400BDC5BA /* Controller */,
+			);
+			path = Artwork;
+			sourceTree = "<group>";
+		};
+		65FB40DB1E97775300BDC5BA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				65FB40DC1E97775300BDC5BA /* Controller */,
+				65FB40E01E97775300BDC5BA /* View */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		65FB40DC1E97775300BDC5BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65FB40DD1E97775300BDC5BA /* IconsViewController.swift */,
+				65FB40DE1E97775300BDC5BA /* IconsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		65FB40E01E97775300BDC5BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65FB40E11E97775300BDC5BA /* BaseButton.swift */,
+				65FB40E21E97775300BDC5BA /* DragDropView.swift */,
+				65FB40E31E97775300BDC5BA /* IconsCollectionHeader.swift */,
+				65FB40E41E97775300BDC5BA /* IconsCollectionHeader.xib */,
+				65FB40E51E97775300BDC5BA /* IconsCollectionItem.swift */,
+				65FB40E61E97775300BDC5BA /* IconsCollectionItem.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		65D1C1801E8AAE89008D8074 /* Controller */ = {
+		65FB40F21E97777800BDC5BA /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				65D1C1811E8AAEB0008D8074 /* MainWindowController.swift */,
-				65D1C1821E8AAEB0008D8074 /* MainWindowController.xib */,
-				65D1C1851E8AAEE6008D8074 /* ContainerViewController.swift */,
-				65D1C1881E8AB543008D8074 /* ContentViewController.swift */,
-				65D1C18A1E8AB589008D8074 /* IconsViewController.swift */,
-				65D1C18B1E8AB589008D8074 /* IconsViewController.xib */,
-				65D1C18E1E8AB733008D8074 /* ArtworkViewController.swift */,
-				65D1C18F1E8AB733008D8074 /* ArtworkViewController.xib */,
-				65D1C1921E8AB743008D8074 /* DefaultViewController.swift */,
-				65D1C1931E8AB743008D8074 /* DefaultViewController.xib */,
+				65FB41071E97798300BDC5BA /* ResourcesManager.swift */,
+				65FB40F31E97777800BDC5BA /* ContainerViewController.swift */,
+				65FB40F41E97777800BDC5BA /* ContentViewController.swift */,
+				65FB40F51E97777800BDC5BA /* MainWindowController.swift */,
+				65FB40F61E97777800BDC5BA /* MainWindowController.xib */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		65FB40FB1E9777D400BDC5BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				65FB41091E977E9400BDC5BA /* ArtworkCollectionItem.swift */,
+				65FB410A1E977E9400BDC5BA /* ArtworkCollectionItem.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		65FB40FC1E9777D400BDC5BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65FB40FD1E9777D400BDC5BA /* ArtworkViewController.swift */,
+				65FB40FE1E9777D400BDC5BA /* ArtworkViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		65FB41011E9777FC00BDC5BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		65FB41021E9777FC00BDC5BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65FB41031E9777FC00BDC5BA /* DefaultViewController.swift */,
+				65FB41041E9777FC00BDC5BA /* DefaultViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +342,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NW8RX498T2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					6546FD131E89F69C00280AFD = {
 						CreatedOnToolsVersion = 8.1;
@@ -307,15 +387,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D1C1951E8AB743008D8074 /* DefaultViewController.xib in Resources */,
+				65FB41061E9777FC00BDC5BA /* DefaultViewController.xib in Resources */,
 				6546FD0B1E89F69C00280AFD /* Assets.xcassets in Resources */,
-				65D1C1841E8AAEB0008D8074 /* MainWindowController.xib in Resources */,
 				652F0E5C1E93989000AEE6E5 /* icontypes.plist in Resources */,
+				65FB41001E9777D400BDC5BA /* ArtworkViewController.xib in Resources */,
+				65FB410C1E977E9400BDC5BA /* ArtworkCollectionItem.xib in Resources */,
+				65FB40EE1E97775300BDC5BA /* IconsCollectionHeader.xib in Resources */,
+				65FB40FA1E97777800BDC5BA /* MainWindowController.xib in Resources */,
+				65FB40F01E97775300BDC5BA /* IconsCollectionItem.xib in Resources */,
 				652F0E401E9388EC00AEE6E5 /* Images.bundle in Resources */,
 				6546FD0E1E89F69C00280AFD /* MainMenu.xib in Resources */,
-				65D1C1911E8AB733008D8074 /* ArtworkViewController.xib in Resources */,
-				65D1C18D1E8AB589008D8074 /* IconsViewController.xib in Resources */,
-				65F3F2811E9245390064494F /* IconsCollectionItem.xib in Resources */,
+				65FB40E91E97775300BDC5BA /* IconsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,18 +422,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D1C1891E8AB543008D8074 /* ContentViewController.swift in Sources */,
-				651432611E8BA75100C5373F /* DragDropView.swift in Sources */,
-				65D1C18C1E8AB589008D8074 /* IconsViewController.swift in Sources */,
-				65D1C1941E8AB743008D8074 /* DefaultViewController.swift in Sources */,
-				65E9817E1E8CDFB7001F3CEE /* MessageView.swift in Sources */,
-				65D1C1871E8AAFDD008D8074 /* MainWindowController.swift in Sources */,
-				6546FD381E8A3ACB00280AFD /* BaseButton.swift in Sources */,
+				65FB40FF1E9777D400BDC5BA /* ArtworkViewController.swift in Sources */,
+				65FB410B1E977E9400BDC5BA /* ArtworkCollectionItem.swift in Sources */,
+				65FB41081E97798300BDC5BA /* ResourcesManager.swift in Sources */,
+				65FB40F91E97777800BDC5BA /* MainWindowController.swift in Sources */,
+				65FB40F71E97777800BDC5BA /* ContainerViewController.swift in Sources */,
+				65FB40F81E97777800BDC5BA /* ContentViewController.swift in Sources */,
 				6546FD091E89F69C00280AFD /* AppDelegate.swift in Sources */,
-				65D1C1861E8AAEE6008D8074 /* ContainerViewController.swift in Sources */,
-				65F3F2801E9245390064494F /* IconsCollectionItem.swift in Sources */,
-				65D1C1901E8AB733008D8074 /* ArtworkViewController.swift in Sources */,
-				652F0E5E1E939DE900AEE6E5 /* ResourcesManager.swift in Sources */,
+				65FB41051E9777FC00BDC5BA /* DefaultViewController.swift in Sources */,
+				65FB40EB1E97775300BDC5BA /* BaseButton.swift in Sources */,
+				65FB40EC1E97775300BDC5BA /* DragDropView.swift in Sources */,
+				65FB40E81E97775300BDC5BA /* IconsViewController.swift in Sources */,
+				65FB40EF1E97775300BDC5BA /* IconsCollectionItem.swift in Sources */,
+				65FB40ED1E97775300BDC5BA /* IconsCollectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,11 +575,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Modify/Modify.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NW8RX498T2;
 				INFOPLIST_FILE = Modify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = demo.Modify;
+				PRODUCT_BUNDLE_IDENTIFIER = yanyinghenmei.Modify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -506,11 +590,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Modify/Modify.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NW8RX498T2;
 				INFOPLIST_FILE = Modify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = demo.Modify;
+				PRODUCT_BUNDLE_IDENTIFIER = yanyinghenmei.Modify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

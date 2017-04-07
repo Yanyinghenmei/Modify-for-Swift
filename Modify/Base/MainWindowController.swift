@@ -20,7 +20,7 @@ class MainWindowController: NSWindowController {
         super.windowDidLoad()
         self.window?.title = "Modift"
         
-        self.window?.minSize = CGSize.init(width: 600, height: 550)
+        self.window?.minSize = CGSize.init(width: 700, height: 650)
         iconBtn.isSelect = true
         
         self.leftView.layer?.backgroundColor = NSColor.init(srgbRed: 56/255.0, green: 56/255.0, blue: 56/255.0, alpha: 1).cgColor

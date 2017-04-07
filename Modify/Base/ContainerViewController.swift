@@ -20,6 +20,10 @@ class ContainerViewController: NSViewController, DragDropDelegate {
         let artworkVC = ArtworkViewController(nibName: "ArtworkViewController", bundle: nil)
         let defaultVC = DefaultViewController(nibName: "DefaultViewController", bundle: nil)
         
+        iconVC?.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
+        artworkVC?.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
+        defaultVC?.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
+        
         self.addChildViewController(iconVC!)
         self.addChildViewController(artworkVC!)
         self.addChildViewController(defaultVC!)

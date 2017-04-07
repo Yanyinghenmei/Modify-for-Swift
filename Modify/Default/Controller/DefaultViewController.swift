@@ -1,5 +1,5 @@
 //
-//  ArtworkViewController.swift
+//  DefaultViewController.swift
 //  Modify
 //
 //  Created by Daniel on 2017/3/28.
@@ -8,11 +8,10 @@
 
 import Cocoa
 
-class ArtworkViewController: ContentViewController {
+class DefaultViewController: ContentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
-    
 }

@@ -12,6 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     public var mainWindowController:MainWindowController?
+    public var scale:CGFloat?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
