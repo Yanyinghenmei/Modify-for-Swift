@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650903A11E990AAA00F74FC2 /* IconsModelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650903A01E990AAA00F74FC2 /* IconsModelsManager.swift */; };
+		650903A31E990AF900F74FC2 /* ArtworkModelsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650903A21E990AF900F74FC2 /* ArtworkModelsManager.swift */; };
 		652F0E401E9388EC00AEE6E5 /* Images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 652F0E3F1E9388EC00AEE6E5 /* Images.bundle */; };
 		652F0E5C1E93989000AEE6E5 /* icontypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 652F0E5B1E93989000AEE6E5 /* icontypes.plist */; };
 		6546FD091E89F69C00280AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6546FD081E89F69C00280AFD /* AppDelegate.swift */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		650903A01E990AAA00F74FC2 /* IconsModelsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsModelsManager.swift; sourceTree = "<group>"; };
+		650903A21E990AF900F74FC2 /* ArtworkModelsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkModelsManager.swift; sourceTree = "<group>"; };
 		650DF5021E95F72E0065FAC5 /* Modify.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Modify.entitlements; sourceTree = "<group>"; };
 		652F0E3F1E9388EC00AEE6E5 /* Images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Images.bundle; sourceTree = "<group>"; };
 		652F0E5B1E93989000AEE6E5 /* icontypes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = icontypes.plist; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				65FB41071E97798300BDC5BA /* ResourcesManager.swift */,
+				650903A01E990AAA00F74FC2 /* IconsModelsManager.swift */,
+				650903A21E990AF900F74FC2 /* ArtworkModelsManager.swift */,
 				65FB40F31E97777800BDC5BA /* ContainerViewController.swift */,
 				65FB40F41E97777800BDC5BA /* ContentViewController.swift */,
 				65FB40F51E97777800BDC5BA /* MainWindowController.swift */,
@@ -432,6 +438,8 @@
 				65FB41051E9777FC00BDC5BA /* DefaultViewController.swift in Sources */,
 				65FB40EB1E97775300BDC5BA /* BaseButton.swift in Sources */,
 				65FB40EC1E97775300BDC5BA /* DragDropView.swift in Sources */,
+				650903A11E990AAA00F74FC2 /* IconsModelsManager.swift in Sources */,
+				650903A31E990AF900F74FC2 /* ArtworkModelsManager.swift in Sources */,
 				65FB40E81E97775300BDC5BA /* IconsViewController.swift in Sources */,
 				65FB40EF1E97775300BDC5BA /* IconsCollectionItem.swift in Sources */,
 				65FB40ED1E97775300BDC5BA /* IconsCollectionHeader.swift in Sources */,
@@ -580,6 +588,7 @@
 				DEVELOPMENT_TEAM = NW8RX498T2;
 				INFOPLIST_FILE = Modify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = yanyinghenmei.Modify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -595,6 +604,7 @@
 				DEVELOPMENT_TEAM = NW8RX498T2;
 				INFOPLIST_FILE = Modify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = yanyinghenmei.Modify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

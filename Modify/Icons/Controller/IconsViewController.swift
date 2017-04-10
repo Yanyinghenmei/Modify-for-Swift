@@ -29,7 +29,7 @@ class IconsViewController: ContentViewController {
                         
                         let subImageArr:NSMutableArray = NSMutableArray.init()
                         for dic in self.typesArr! {
-                            let model = ResourcesManager.creatImageModel(info: dic as! NSDictionary, imageUrl: url)
+                            let model = IconsModelsManager.creatImageModel(info: dic as! NSDictionary, imageUrl: url)
                             subImageArr.add(model)
                         }
                         self.modelArr?.add(subImageArr)
@@ -76,7 +76,7 @@ extension IconsViewController: NSCollectionViewDataSource {
             header.exportHandle = {section in
                 // exportImage
                 let subArr:NSArray = self.modelArr?.object(at: indexPath.section) as! NSArray
-                let _ = ResourcesManager.exportImages(modelArray: subArr)
+                let _ = IconsModelsManager.exportImages(modelArray: subArr)
             }
             
             return header;
