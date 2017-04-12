@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="system font weights other than Regular or Bold" minToolsVersion="7.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DefaultCollectionViewItem" customModule="Modify" customModuleProvider="target">
+            <connections>
+                <outlet property="imgView" destination="GtR-Ra-SiS" id="lBe-V7-PlY"/>
+                <outlet property="nameLabel" destination="B1m-36-Ufp" id="cUo-tX-ieh"/>
+                <outlet property="sizeLabel" destination="tAg-ev-HDb" id="hnh-8r-9DL"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="125" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GtR-Ra-SiS">
+                    <rect key="frame" x="38" y="63" width="50" height="50"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="temp" id="aP0-lT-tCO"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1m-36-Ufp">
+                    <rect key="frame" x="37" y="30" width="51" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="JPu-o7-TxL"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Icon-72" id="r5F-WG-geK">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAg-ev-HDb">
+                    <rect key="frame" x="44" y="15" width="37" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="pkA-kc-PZE"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="72x72" id="xdu-Vd-ZRT">
+                        <font key="font" metaFont="systemMedium" size="11"/>
+                        <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="GtR-Ra-SiS" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="5AM-aR-sSZ"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GtR-Ra-SiS" secondAttribute="trailing" constant="15" id="BQc-Wu-2TD"/>
+                <constraint firstItem="B1m-36-Ufp" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="J8D-zV-xYY"/>
+                <constraint firstItem="GtR-Ra-SiS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="15" id="OAL-ia-btS"/>
+                <constraint firstItem="tAg-ev-HDb" firstAttribute="top" secondItem="B1m-36-Ufp" secondAttribute="bottom" id="OXH-eS-h3Z"/>
+                <constraint firstItem="B1m-36-Ufp" firstAttribute="top" secondItem="GtR-Ra-SiS" secondAttribute="bottom" constant="15" id="c0H-tS-OOm"/>
+                <constraint firstItem="tAg-ev-HDb" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="cfU-na-IeF"/>
+                <constraint firstAttribute="bottom" secondItem="tAg-ev-HDb" secondAttribute="bottom" constant="15" id="fAd-fI-kTH"/>
+                <constraint firstItem="GtR-Ra-SiS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="15" id="slC-Pk-7M6"/>
+            </constraints>
+            <point key="canvasLocation" x="10.5" y="191"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="temp" width="50" height="50"/>
+    </resources>
+</document>

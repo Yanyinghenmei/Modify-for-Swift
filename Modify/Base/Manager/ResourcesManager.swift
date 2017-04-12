@@ -37,5 +37,30 @@ class ResourcesManager {
         return newImage
     }
     
+    public class func clipImage(size:CGSize, image:NSImage) -> NSImage {
+        
+        let fromRect:NSRect?
+        
+        // image的宽比较大 或者image的高比价小
+        
+        if image.size.width/image.size.height >= size.width/size.height {
+            let width = image.size.height * (size.width/size.height)
+            fromRect = NSRect.init(x: (image.size.width-width)/2, y: 0, width: width, height: image.size.height)
+        } else {
+            let height = image.size.width * (size.height/size.width)
+            fromRect = NSRect.init(x: 0, y: (image.size.height-height)/2, width: image.size.width, height: height)
+        }
+        
+        let newImage:NSImage = NSImage.init(size: size)
+        newImage.lockFocus()
+        NSGraphicsContext.saveGraphicsState()
+        image.draw(in: NSRect.init(origin: .zero, size: size), from: fromRect!, operation: .copy, fraction: 1)
+        
+        NSGraphicsContext.restoreGraphicsState()
+        newImage.unlockFocus()
+        
+        return newImage
+    }
+    
 }
 
