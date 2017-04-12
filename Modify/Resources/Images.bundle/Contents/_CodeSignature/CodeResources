@@ -8,6 +8,10 @@
 		<data>
 		+Pva5wX7FcAbeBhmZ8eKm3ZtPYA=
 		</data>
+		<key>Resources/DropDefault.tiff</key>
+		<data>
+		omR66LOLTdka86smwBsFTdoHI6g=
+		</data>
 		<key>Resources/DropIcon.tiff</key>
 		<data>
 		+ljd86xwN8wn2Tj6B7PR7oTtUHs=
@@ -24,6 +28,17 @@
 			<key>hash2</key>
 			<data>
 			1M6RLmeG4ha2aZ0zhUJuCPyTq5VQ4ZwBpi7ZnWOjDLg=
+			</data>
+		</dict>
+		<key>Resources/DropDefault.tiff</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			omR66LOLTdka86smwBsFTdoHI6g=
+			</data>
+			<key>hash2</key>
+			<data>
+			38/d3Ksh96WEgdw38ehITpKH3ZBd+b4EhGnCKeEQD4c=
 			</data>
 		</dict>
 		<key>Resources/DropIcon.tiff</key>

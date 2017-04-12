@@ -23,7 +23,7 @@ class MainWindowController: NSWindowController {
         self.window?.minSize = CGSize.init(width: 700, height: 650)
         iconBtn.isSelect = true
         
-        self.leftView.layer?.backgroundColor = NSColor.init(srgbRed: 56/255.0, green: 56/255.0, blue: 56/255.0, alpha: 1).cgColor
+        self.leftView.layer?.backgroundColor = NSColor.init(srgbRed: 194/255.0, green: 187/255.0, blue: 181/255.0, alpha: 1).cgColor
         
         setColor(btn: iconBtn, color: NSColor.white)
         setColor(btn: artworkBtn, color: NSColor.white)

@@ -49,7 +49,7 @@ class DefaultViewController: ContentViewController {
         super.viewDidLoad()
         tipImgView.unregisterDraggedTypes()
         typesArr = ResourcesManager.typesArrayWithPlistName(name: "defaulttypes")
-        tipImgView.image = ResourcesManager.imageWithName(name: "DropArtwork")
+        tipImgView.image = ResourcesManager.imageWithName(name: "DropDefault")
     }
     
     override func viewDidLayout() {
