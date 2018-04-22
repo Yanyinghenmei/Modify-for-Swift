@@ -22,9 +22,9 @@
 		<key>height</key>
 		<string>960</string>
 		<key>platform</key>
-        <string>iPhone</string>
-        <key>isPortrait</key>
-        <true/>
+		<string>iPhone</string>
+		<key>isPortrait</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -34,9 +34,9 @@
 		<key>height</key>
 		<string>1136</string>
 		<key>platform</key>
-        <string>iPhone</string>
-        <key>isPortrait</key>
-        <true/>
+		<string>iPhone</string>
+		<key>isPortrait</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -46,9 +46,9 @@
 		<key>height</key>
 		<string>1334</string>
 		<key>platform</key>
-        <string>iPhone</string>
-        <key>isPortrait</key>
-        <true/>
+		<string>iPhone</string>
+		<key>isPortrait</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -58,9 +58,9 @@
 		<key>height</key>
 		<string>2208</string>
 		<key>platform</key>
-        <string>iPhone</string>
-        <key>isPortrait</key>
-        <true/>
+		<string>iPhone</string>
+		<key>isPortrait</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -70,9 +70,9 @@
 		<key>height</key>
 		<string>1024</string>
 		<key>platform</key>
-        <string>iPad</string>
-        <key>isPortrait</key>
-        <true/>
+		<string>iPad</string>
+		<key>isPortrait</key>
+		<true/>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -82,9 +82,21 @@
 		<key>height</key>
 		<string>2048</string>
 		<key>platform</key>
-        <string>iPad</string>
-        <key>isPortrait</key>
-        <true/>
+		<string>iPad</string>
+		<key>isPortrait</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>default-812@3x</string>
+		<key>width</key>
+		<string>1125</string>
+		<key>height</key>
+		<string>2436</string>
+		<key>platform</key>
+		<string>iPhone</string>
+		<key>isPortrait</key>
+		<true/>
 	</dict>
 </array>
 </plist>
