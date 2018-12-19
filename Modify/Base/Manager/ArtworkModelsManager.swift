@@ -16,14 +16,14 @@ struct ArtworkImageModel {
     var width:Double {
         willSet{
             let sourceImage = NSImage.init(contentsOf: sourceUrl)
-            minImage = ResourcesManager.creatImage(width: newValue, height: height, image: sourceImage!)
+            minImage = ResourcesManager.createImage(width: newValue, height: height, image: sourceImage!)
         }
     }
     
     var height:Double {
         willSet{
             let sourceImage = NSImage.init(contentsOf: sourceUrl)
-            minImage = ResourcesManager.creatImage(width: width, height: newValue, image: sourceImage!)
+            minImage = ResourcesManager.createImage(width: width, height: newValue, image: sourceImage!)
         }
     }
     
@@ -47,7 +47,7 @@ struct ArtworkImageModel {
 class ArtworkModelsManager {
     public class func creatArtworkImageModel(sourceUrl:URL) -> ArtworkImageModel {
         let sourceImage = NSImage.init(contentsOf: sourceUrl)
-        let minImage = ResourcesManager.creatImage(width: Double(CGFloat((sourceImage?.size.width)!/3)), height: Double(CGFloat((sourceImage?.size.height)!/3.00)), image: sourceImage!)
+        let minImage = ResourcesManager.createImage(width: Double(CGFloat((sourceImage?.size.width)!/3)), height: Double(CGFloat((sourceImage?.size.height)!/3.00)), image: sourceImage!)
         let range:Range = sourceUrl.lastPathComponent.range(of: ".")!
         let name = sourceUrl.lastPathComponent.substring(to: range.lowerBound)
         
@@ -92,9 +92,16 @@ class ArtworkModelsManager {
                         let saveUrl = url.appendingPathComponent(name)
                         
                         let sourceImage = NSImage.init(contentsOf: model.sourceUrl)
+                        if sourceImage == nil {
+                            let alert = NSAlert.init()
+                            alert.messageText = "Not find source image with path:\n\(model.sourceUrl.absoluteString)"
+                            alert.addButton(withTitle: "Sure")
+                            alert.beginSheetModal(for: NSApplication.shared().mainWindow!, completionHandler:nil)
+                            return;
+                        }
                         
                         let scale = Double((NSApplication.shared().windows.last?.backingScaleFactor)!) / Double(index)
-                        let image = ResourcesManager.creatImage(width: model.width/scale, height:model.height/scale, image: sourceImage!)
+                        let image = ResourcesManager.createImage(width: model.width/scale, height:model.height/scale, image: sourceImage!)
                         let imageData = image.tiffRepresentation
                         
                         let bitRep:NSBitmapImageRep = NSBitmapImageRep.init(data: imageData!)!

@@ -29,7 +29,7 @@ class IconsViewController: ContentViewController {
                         
                         let subImageArr:NSMutableArray = NSMutableArray.init()
                         for dic in self.typesArr! {
-                            let model = IconsModelsManager.creatImageModel(info: dic as! NSDictionary, imageUrl: url)
+                            let model = IconsModelsManager.createImageModel(info: dic as! NSDictionary, imageUrl: url)
                             subImageArr.add(model)
                         }
                         self.modelArr?.add(subImageArr)

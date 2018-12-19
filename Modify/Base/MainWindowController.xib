@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,20 +18,20 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="700" height="650"/>
+            <rect key="contentRect" x="196" y="240" width="612" height="447"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="700" height="650"/>
+                <rect key="frame" x="0.0" y="0.0" width="612" height="447"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="F6A-eg-ciF">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="650"/>
+                        <rect key="frame" x="0.0" y="0.0" width="120" height="447"/>
                         <subviews>
                             <button tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="hZQ-a9-NHh" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="-1" y="561" width="121" height="44"/>
+                                <rect key="frame" x="0.0" y="358" width="120" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="coT-nA-BhA"/>
                                 </constraints>
@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="fHY-0n-g7y" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="606" width="120" height="44"/>
+                                <rect key="frame" x="0.0" y="403" width="120" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="opj-jh-RsJ"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="K4V-Hq-Q7r" customClass="BaseButton" customModule="Modify" customModuleProvider="target">
-                                <rect key="frame" x="-1" y="516" width="121" height="44"/>
+                                <rect key="frame" x="0.0" y="313" width="120" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Son-e3-7o1"/>
                                 </constraints>
@@ -86,7 +86,7 @@
                         </constraints>
                     </customView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="w3R-Cj-IZP" customClass="DragDropView" customModule="Modify" customModuleProvider="target">
-                        <rect key="frame" x="120" y="0.0" width="580" height="650"/>
+                        <rect key="frame" x="120" y="0.0" width="492" height="447"/>
                     </customView>
                 </subviews>
                 <constraints>
@@ -102,7 +102,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="135" y="111"/>
+            <point key="canvasLocation" x="91" y="9.5"/>
         </window>
         <viewController id="Ptm-Hf-KnM" customClass="ContainerViewController" customModule="Modify" customModuleProvider="target">
             <connections>

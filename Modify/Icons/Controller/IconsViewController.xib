@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,18 +16,18 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="356"/>
+            <rect key="frame" x="0.0" y="0.0" width="521" height="444"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgi-tv-HLe">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="356"/>
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgi-tv-HLe">
+                    <rect key="frame" x="0.0" y="0.0" width="521" height="444"/>
                     <clipView key="contentView" drawsBackground="NO" id="HT5-Yl-HbP">
-                        <rect key="frame" x="1" y="1" width="478" height="354"/>
+                        <rect key="frame" x="1" y="1" width="519" height="442"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView selectable="YES" id="QRc-GU-iDD">
-                                <rect key="frame" x="0.0" y="0.0" width="478" height="354"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="519" height="442"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="xQi-NN-h3L">
                                     <size key="itemSize" width="125" height="165"/>
                                     <size key="headerReferenceSize" width="480" height="50"/>
@@ -43,7 +43,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="2bi-0m-lba">
-                        <rect key="frame" x="1" y="144" width="233" height="15"/>
+                        <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="rVj-e5-cCD">
@@ -52,7 +52,7 @@
                     </scroller>
                 </scrollView>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fy9-Ki-CSU">
-                    <rect key="frame" x="176" y="114" width="128" height="128"/>
+                    <rect key="frame" x="197" y="158" width="128" height="128"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="Ca1-f0-vC6"/>
                         <constraint firstAttribute="width" constant="128" id="axM-Vm-B2e"/>
@@ -68,7 +68,7 @@
                 <constraint firstAttribute="trailing" secondItem="fgi-tv-HLe" secondAttribute="trailing" id="dCh-dw-Sok"/>
                 <constraint firstAttribute="bottom" secondItem="fgi-tv-HLe" secondAttribute="bottom" id="zWA-Sm-KP2"/>
             </constraints>
-            <point key="canvasLocation" x="216" y="180"/>
+            <point key="canvasLocation" x="236.5" y="224"/>
         </customView>
     </objects>
 </document>

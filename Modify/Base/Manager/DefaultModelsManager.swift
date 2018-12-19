@@ -18,14 +18,19 @@ struct DefaultModel {
 }
 
 class DefaultModelsManager {
-    public class func creatImageModel(info:NSDictionary, imageUrl:URL) -> DefaultModel {
+    public class func createImageModel(info:NSDictionary, imageUrl:URL) -> DefaultModel {
         let width:Int = Int(info["width"] as! String)!
         let height:Int = Int(info["height"] as! String)!
         
         let image = NSImage(contentsOf: imageUrl)
         let newImage = ResourcesManager.clipImage(size: CGSize.init(width: CGFloat(width), height: CGFloat(height)), image: image!)
         
-        let model = DefaultModel.init(name: info["name"] as! String, width: width, height: height, platform: info["platform"] as! String, image: newImage, isPortrait: info["isPortrait"] as! Bool)
+        let model = DefaultModel.init(name: info["name"] as! String,
+                                      width: width,
+                                      height: height,
+                                      platform: info["platform"] as! String,
+                                      image: newImage,
+                                      isPortrait: info["isPortrait"] as! Bool)
         
         return model
     }
@@ -60,7 +65,7 @@ class DefaultModelsManager {
                         height = Double(model.width)
                     }
                     
-                    let image:NSImage = ResourcesManager.creatImage(width: width!/scale, height: height!/scale, image: model.image)
+                    let image:NSImage = ResourcesManager.createImage(width: width!/scale, height: height!/scale, image: model.image)
                     
                     let imageData = image.tiffRepresentation
                     

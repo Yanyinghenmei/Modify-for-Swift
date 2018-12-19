@@ -24,8 +24,8 @@ class ResourcesManager {
         return array ?? NSArray()
     }
     
-    // Creat a image
-    public class func creatImage(width:Double, height:Double, image:NSImage) -> NSImage {
+    // Create a image
+    public class func createImage(width:Double, height:Double, image:NSImage) -> NSImage {
         
         let newImage:NSImage = NSImage.init(size: CGSize.init(width: width, height: height))
         newImage.lockFocus()

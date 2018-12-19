@@ -28,7 +28,7 @@ class DefaultViewController: ContentViewController {
                         
                         let subImageArr:NSMutableArray = NSMutableArray.init()
                         for dic in self.typesArr! {
-                            let model = DefaultModelsManager.creatImageModel(info: dic as! NSDictionary, imageUrl: url)
+                            let model = DefaultModelsManager.createImageModel(info: dic as! NSDictionary, imageUrl: url)
                             subImageArr.add(model)
                         }
                         self.modelArr?.add(subImageArr)

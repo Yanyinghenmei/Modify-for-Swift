@@ -2,101 +2,149 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
-	<dict>
-		<key>name</key>
-		<string>default</string>
-		<key>width</key>
-		<string>320</string>
-		<key>height</key>
-		<string>480</string>
-		<key>platform</key>
-		<string>iPhone</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>default@2x</string>
-		<key>width</key>
-		<string>640</string>
-		<key>height</key>
-		<string>960</string>
-		<key>platform</key>
-		<string>iPhone</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>default-568@2x</string>
-		<key>width</key>
-		<string>640</string>
-		<key>height</key>
-		<string>1136</string>
-		<key>platform</key>
-		<string>iPhone</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>default-667@2x</string>
-		<key>width</key>
-		<string>750</string>
-		<key>height</key>
-		<string>1334</string>
-		<key>platform</key>
-		<string>iPhone</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>default-736@3x</string>
-		<key>width</key>
-		<string>1242</string>
-		<key>height</key>
-		<string>2208</string>
-		<key>platform</key>
-		<string>iPhone</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>default-ipad</string>
-		<key>width</key>
-		<string>768</string>
-		<key>height</key>
-		<string>1024</string>
-		<key>platform</key>
-		<string>iPad</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>default-ipad@2x</string>
-		<key>width</key>
-		<string>1536</string>
-		<key>height</key>
-		<string>2048</string>
-		<key>platform</key>
-		<string>iPad</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
-	<dict>
-		<key>name</key>
-		<string>default-812@3x</string>
-		<key>width</key>
-		<string>1125</string>
-		<key>height</key>
-		<string>2436</string>
-		<key>platform</key>
-		<string>iPhone</string>
-		<key>isPortrait</key>
-		<true/>
-	</dict>
+<!--12.9 iPad Pro             2048px × 2732px-->
+<dict>
+    <key>name</key>
+    <string>12.9_iPad_Pro</string>
+    <key>width</key>
+    <string>2048</string>
+    <key>height</key>
+    <string>2732</string>
+    <key>platform</key>
+    <string>iPad</string>
+    <key>isPortrait</key>
+    <true/>
+</dict>
+<!--11 iPad Pro               1668px × 2388px-->
+<dict>
+    <key>name</key>
+    <string>11_iPad_Pro</string>
+    <key>width</key>
+    <string>1668</string>
+    <key>height</key>
+    <string>2388</string>
+    <key>platform</key>
+    <string>iPad</string>
+    <key>isPortrait</key>
+    <true/>
+</dict>
+<!--10.5 iPad Pro             1668px × 2224px-->
+<dict>
+    <key>name</key>
+    <string>10.5_iPad_Pro</string>
+    <key>width</key>
+    <string>1668</string>
+    <key>height</key>
+    <string>2224</string>
+    <key>platform</key>
+    <string>iPad</string>
+    <key>isPortrait</key>
+    <true/>
+</dict>
+<!--9.7 iPad                  1536px × 2048px-->
+<dict>
+    <key>name</key>
+    <string>9.7_iPad</string>
+    <key>width</key>
+    <string>1536</string>
+    <key>height</key>
+    <string>2048</string>
+    <key>platform</key>
+    <string>iPad</string>
+    <key>isPortrait</key>
+    <true/>
+</dict>
+<!--7.9 iPad mini 4           1536px × 2048px-->
+<dict>
+    <key>name</key>
+    <string>7.9_iPad_mini_4</string>
+    <key>width</key>
+    <string>1536</string>
+    <key>height</key>
+    <string>2048</string>
+    <key>platform</key>
+    <string>iPad</string>
+    <key>isPortrait</key>
+    <true/>
+</dict>
+<!--iPhone XS Max              1242px × 2688px-->
+<dict>
+    <key>name</key>
+    <string>iPhone_XS_Max</string>
+    <key>width</key>
+    <string>1242</string>
+    <key>height</key>
+    <string>2688</string>
+    <key>platform</key>
+    <string>iPhone</string>
+    <key>isPortrait</key>
+    <true/>
+</dict>
+<!--iPhone XR                  828px × 1792px-->
+<dict>
+    <key>name</key>
+    <string>iPhone_XR</string>
+    <key>width</key>
+    <string>828</string>
+    <key>height</key>
+    <string>1792</string>
+    <key>platform</key>
+    <string>iPhone</string>
+    <key>isPortrait</key>
+    <true/>
+</dict>
+<!--iPhone X/S                   1125px × 2436px-->
+    <dict>
+        <key>name</key>
+        <string>iPhone_X</string>
+        <key>width</key>
+        <string>1125</string>
+        <key>height</key>
+        <string>2436</string>
+        <key>platform</key>
+        <string>iPhone</string>
+        <key>isPortrait</key>
+        <true/>
+    </dict>
+<!--iPhone 6/7/8 Plus              1242px × 2208px-->
+    <dict>
+        <key>name</key>
+        <string>iPhone_6_7_8_Plus</string>
+        <key>width</key>
+        <string>1242</string>
+        <key>height</key>
+        <string>2208</string>
+        <key>platform</key>
+        <string>iPad</string>
+        <key>isPortrait</key>
+        <true/>
+    </dict>
+<!--iPhone 6/7/8               750px × 1334px-->
+    <dict>
+        <key>name</key>
+        <string>iPhone_6_7_8</string>
+        <key>width</key>
+        <string>750</string>
+        <key>height</key>
+        <string>1334</string>
+        <key>platform</key>
+        <string>iPad</string>
+        <key>isPortrait</key>
+        <true/>
+    </dict>
+<!--iPhone SE                  640px × 1136px-->
+    <dict>
+        <key>name</key>
+        <string>iPhone_SE</string>
+        <key>width</key>
+        <string>640</string>
+        <key>height</key>
+        <string>1136</string>
+        <key>platform</key>
+        <string>iPhone</string>
+        <key>isPortrait</key>
+        <true/>
+    </dict>
 </array>
 </plist>
+

@@ -19,12 +19,12 @@ struct ImageModel {
 class IconsModelsManager {
     
     // creat a ImageModel
-    public class func creatImageModel(info:NSDictionary, imageUrl:URL) -> ImageModel {
+    public class func createImageModel(info:NSDictionary, imageUrl:URL) -> ImageModel {
         
         let widthStr = info["minsize"] as! String
         let width = Double(widthStr)
         let image = NSImage(contentsOf: imageUrl)
-        let newImage = ResourcesManager.creatImage(width: width!, height:width!, image: image!)
+        let newImage = ResourcesManager.createImage(width: width!, height:width!, image: image!)
         
         let model = ImageModel.init(name: info["name"] as! String, minsize: width!, sizes: info["sizes"] as! Array<String>, sourceUrl: imageUrl, minImage: newImage)
         return model
@@ -60,15 +60,24 @@ class IconsModelsManager {
                         
                         // if it's iTunesArtWork
                         if model.name == "iTunesArtwork" {
-                            imageName?.removeSubrange((imageName?.index((imageName?.endIndex)!, offsetBy: -4))!..<(imageName?.endIndex)!)
+                            var tempImageName = imageName;
+                            tempImageName?.removeSubrange((imageName?.index((imageName?.endIndex)!, offsetBy: -4))!..<(imageName?.endIndex)!)
+                            imageName = tempImageName;
                         }
                         
                         let saveUrl = url.appendingPathComponent(imageName!)
                         
                         let sourceImage = NSImage.init(contentsOf: model.sourceUrl)
+                        if sourceImage == nil {
+                            let alert = NSAlert.init()
+                            alert.messageText = "Not find source image with path:\n\(model.sourceUrl.absoluteString)"
+                            alert.addButton(withTitle: "Sure")
+                            alert.beginSheetModal(for: NSApplication.shared().mainWindow!, completionHandler:nil)
+                            return;
+                        }
                         
                         let scale = Double((NSApplication.shared().windows.last?.backingScaleFactor)!)
-                        let image = ResourcesManager.creatImage(width: width!/scale, height:width!/scale, image: sourceImage!)
+                        let image = ResourcesManager.createImage(width: width!/scale, height:width!/scale, image: sourceImage!)
                         let imageData = image.tiffRepresentation
                         
                         let bitRep:NSBitmapImageRep = NSBitmapImageRep.init(data: imageData!)!

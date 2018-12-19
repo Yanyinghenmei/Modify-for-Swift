@@ -6,6 +6,10 @@
 //  Copyright © 2017年 Daniel. All rights reserved.
 //
 
+// Human Interface Guidelines
+// https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/
+
+
 import Cocoa
 
 @NSApplicationMain
