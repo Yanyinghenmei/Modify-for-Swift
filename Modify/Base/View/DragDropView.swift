@@ -58,6 +58,16 @@ class DragDropView: NSView {
                 }
             }
             
+            if urlArr.count == 0 {
+                DispatchQueue.main.async {
+                    let alert = NSAlert.init()
+                    alert.messageText = "Please add image files!"
+                    alert.addButton(withTitle: "Sure")
+                    alert.beginSheetModal(for: self.window!, completionHandler: nil)
+                }
+                return false
+            }
+            
             self.delegate?.prepareForDargUrlArray(urlArray: urlArr)
         }
         
