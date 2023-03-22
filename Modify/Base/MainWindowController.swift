@@ -18,7 +18,7 @@ class MainWindowController: NSWindowController {
     
     override func windowDidLoad() {
         super.windowDidLoad()
-        self.window?.title = "Modift"
+        self.window?.title = "Modify"
         
         self.window?.minSize = CGSize.init(width: 700, height: 650)
         iconBtn.isSelect = true
