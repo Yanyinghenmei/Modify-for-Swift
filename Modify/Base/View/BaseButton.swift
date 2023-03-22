@@ -14,7 +14,7 @@ class BaseButton: NSButton {
         super.init(coder: coder)
         self.layer?.backgroundColor = NSColor.clear.cgColor
         self.image = #imageLiteral(resourceName: "btn_normal")
-        (self.cell as! NSButtonCell).highlightsBy = NSCellStyleMask(rawValue: 0)
+        (self.cell as! NSButtonCell).highlightsBy = NSCell.StyleMask(rawValue: 0)
     }
     
     public

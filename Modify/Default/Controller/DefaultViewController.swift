@@ -55,8 +55,8 @@ class DefaultViewController: ContentViewController {
     override func viewDidLayout() {
         collectionView.layer?.backgroundColor = NSColor.init(srgbRed: 249/255.00, green: 249/255.00, blue: 249/255.00, alpha: 1).cgColor
         
-        collectionView.register(DefaultCollectionViewItem.self, forItemWithIdentifier: "Default")
-        collectionView.register(NSNib.init(nibNamed: "DefaultCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind: "UICollectionElementKindSectionHeader", withIdentifier: "DefaultHeader")
+        collectionView.register(DefaultCollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "Default"))
+        collectionView.register(NSNib.init(nibNamed: "DefaultCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind: "UICollectionElementKindSectionHeader", withIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "DefaultHeader"))
     }
 }
 
@@ -72,7 +72,7 @@ extension DefaultViewController: NSCollectionViewDataSource {
     
     func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> NSView {
         if kind == "UICollectionElementKindSectionHeader" {
-            let header:DefaultCollectionViewHeader = collectionView.makeSupplementaryView(ofKind: kind, withIdentifier: "DefaultHeader", for: indexPath) as! DefaultCollectionViewHeader
+            let header:DefaultCollectionViewHeader = collectionView.makeSupplementaryView(ofKind: kind, withIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "DefaultHeader"), for: indexPath) as! DefaultCollectionViewHeader
             
             let subArr:NSArray = self.modelArr?.object(at: indexPath.section) as! NSArray
             let firstModel = subArr.firstObject as! DefaultModel
@@ -115,7 +115,7 @@ extension DefaultViewController: NSCollectionViewDataSource {
         let subArray:NSArray = modelArr?.object(at: indexPath.section) as! NSArray
         let model:DefaultModel = subArray.object(at: indexPath.item) as! DefaultModel
         
-        let item = collectionView.makeItem(withIdentifier: "Default", for: indexPath) as! DefaultCollectionViewItem
+        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "Default"), for: indexPath) as! DefaultCollectionViewItem
         item.nameLabel.stringValue = model.name
         item.sizeLabel.stringValue = "\(model.width)x\(model.height)"
         item.imgView.image = model.image

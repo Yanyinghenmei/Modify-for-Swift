@@ -94,7 +94,8 @@ class MyNumberFormatter: NumberFormatter {
         let scanner = Scanner.init(string: partialString)
         var value:Int = 0
         if !(scanner.scanInt(&value) && scanner.isAtEnd) {
-            NSBeep()
+//            NSBeep()
+            __NSBeep()
             return false
         }
         

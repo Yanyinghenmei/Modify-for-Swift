@@ -33,7 +33,7 @@ class MainWindowController: NSWindowController {
     func setColor(btn:NSButton, color:NSColor) {
         let mutableAttrStr = NSMutableAttributedString.init(attributedString: btn.attributedTitle)
         
-        mutableAttrStr.addAttributes([NSForegroundColorAttributeName:color], range: NSRange.init(location: 0, length: btn.attributedTitle.length))
+        mutableAttrStr.addAttributes([NSAttributedString.Key.foregroundColor:color], range: NSRange.init(location: 0, length: btn.attributedTitle.length))
         btn.attributedTitle = mutableAttrStr
     }
     

@@ -75,7 +75,7 @@ class ArtworkModelsManager {
         exportPanel.allowsMultipleSelection = false
         exportPanel.canCreateDirectories = true
         exportPanel.begin { (result) in
-            if result == NSFileHandlingPanelOKButton {
+            if result == .OK {
                 let url = exportPanel.url!
                 
                 for index in 0..<modelArray.count {
@@ -96,17 +96,18 @@ class ArtworkModelsManager {
                             let alert = NSAlert.init()
                             alert.messageText = "Not find source image with path:\n\(model.sourceUrl.absoluteString)"
                             alert.addButton(withTitle: "Sure")
-                            alert.beginSheetModal(for: NSApplication.shared().mainWindow!, completionHandler:nil)
+                            alert.beginSheetModal(for: NSApplication.shared.mainWindow!, completionHandler:nil)
                             return;
                         }
                         
-                        let scale = Double((NSApplication.shared().windows.last?.backingScaleFactor)!) / Double(index)
+                        let scale = Double(NSApplication.shared.windows.last?.backingScaleFactor ?? 0)/Double(index)
+//                        Double((NSApplication.shared().windows.last?.backingScaleFactor)!) / Double(index)
                         let image = ResourcesManager.createImage(width: model.width/scale, height:model.height/scale, image: sourceImage!)
                         let imageData = image.tiffRepresentation
                         
                         let bitRep:NSBitmapImageRep = NSBitmapImageRep.init(data: imageData!)!
                         
-                        let resultData = bitRep.representation(using: NSBitmapImageFileType.PNG, properties: Dictionary.init())
+                        let resultData = bitRep.representation(using: .png, properties: Dictionary.init())
                         
                         do {
                             try resultData?.write(to: saveUrl)

@@ -15,16 +15,16 @@ class DragDropView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         NSColor.init(srgbRed: 249/255.00, green: 249/255.00, blue: 249/255.00, alpha: 1).set()
-        NSRectFill(dirtyRect)
+        __NSRectFill(dirtyRect)
         
-        self.register(forDraggedTypes: [NSFilenamesPboardType])
+        self.registerForDraggedTypes([NSPasteboard.PasteboardType.init(rawValue: "NSFilenamesPboardType")])
     }
     
     override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
-        
-        let pasteBoard = sender.draggingPasteboard()
-        if (pasteBoard.types?.contains(NSFilenamesPboardType))! {
-            let list = pasteBoard.propertyList(forType: NSFilenamesPboardType) as! Array<Any>
+        let type = NSPasteboard.PasteboardType.init(rawValue: "NSFilenamesPboardType")
+        let pasteBoard = sender.draggingPasteboard
+        if (pasteBoard.types?.contains(type))! {
+            let list = pasteBoard.propertyList(forType: type) as! Array<Any>
             sender.numberOfValidItemsForDrop = list.count
             
             for index in 0..<list.count {
@@ -41,10 +41,11 @@ class DragDropView: NSView {
     
     // 松开鼠标的时候
     override func prepareForDragOperation(_ sender: NSDraggingInfo) -> Bool {
+        let type = NSPasteboard.PasteboardType.init(rawValue: "NSFilenamesPboardType")
         // 获取拖动数据中的剪贴板
-        let pasteBoard = sender.draggingPasteboard()
-        if (pasteBoard.types?.contains(NSFilenamesPboardType))! {
-            let list = pasteBoard.propertyList(forType: NSFilenamesPboardType) as! Array<Any>
+        let pasteBoard = sender.draggingPasteboard
+        if (pasteBoard.types?.contains(type))! {
+            let list = pasteBoard.propertyList(forType: type) as! Array<Any>
             
             var urlArr:Array<URL> = []
             for index in 0..<list.count {
@@ -66,7 +67,7 @@ class DragDropView: NSView {
     
 }
 
-protocol DragDropDelegate: class {
+protocol DragDropDelegate: AnyObject {
     func prepareForDargUrlArray(urlArray:Array<URL>)
 }
 

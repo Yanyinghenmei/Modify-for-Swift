@@ -54,8 +54,8 @@ class IconsViewController: ContentViewController {
         tipImageView.image = ResourcesManager.imageWithName(name: "DropIcon")
         
         self.collectionView.layer?.backgroundColor = NSColor.init(srgbRed: 249/255.00, green: 249/255.00, blue: 249/255.00, alpha: 1).cgColor
-        collectionView.register(NSNib.init(nibNamed: "IconsCollectionItem", bundle: nil), forItemWithIdentifier: "Item")
-        collectionView.register(NSNib.init(nibNamed: "IconsCollectionHeader", bundle: nil), forSupplementaryViewOfKind: "UICollectionElementKindSectionHeader", withIdentifier: "Header")
+        collectionView.register(NSNib.init(nibNamed: "IconsCollectionItem", bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "Item"))
+        collectionView.register(NSNib.init(nibNamed: "IconsCollectionHeader", bundle: nil), forSupplementaryViewOfKind: "UICollectionElementKindSectionHeader", withIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "Header"))
     }
 }
 
@@ -71,7 +71,7 @@ extension IconsViewController: NSCollectionViewDataSource {
     
     func collectionView(_ collectionView: NSCollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> NSView {
         if kind == "UICollectionElementKindSectionHeader" {
-            let header:IconsCollectionHeader = collectionView.makeSupplementaryView(ofKind: kind, withIdentifier: "Header", for: indexPath) as! IconsCollectionHeader
+            let header:IconsCollectionHeader = collectionView.makeSupplementaryView(ofKind: kind, withIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "Header"), for: indexPath) as! IconsCollectionHeader
             header.section = indexPath.section
             header.exportHandle = {section in
                 // exportImage
@@ -90,7 +90,7 @@ extension IconsViewController: NSCollectionViewDataSource {
         let subArray:NSArray = modelArr?.object(at: indexPath.section) as! NSArray
         let model:ImageModel = subArray.object(at: indexPath.item) as! ImageModel
         
-        let item = collectionView.makeItem(withIdentifier: "Item", for: indexPath) as! IconsCollectionItem
+        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "Item"), for: indexPath) as! IconsCollectionItem
         item.nameLabel.stringValue = model.name
         item.sizeLabel.stringValue = "\(model.minsize)x\(model.minsize)"
         item.imgView.image = model.minImage

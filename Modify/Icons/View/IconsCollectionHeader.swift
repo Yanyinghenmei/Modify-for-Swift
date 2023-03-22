@@ -17,7 +17,8 @@ class IconsCollectionHeader: NSView {
         super.draw(dirtyRect)
 
         NSColor.white.set()
-        NSRectFill(dirtyRect)
+//        NSRectFill(dirtyRect)
+        __NSRectFill(dirtyRect)
     }
     
     @IBAction func exportClick(_ sender: NSButton) {

@@ -41,7 +41,7 @@ class IconsModelsManager {
         exportPanel.allowsMultipleSelection = false
         exportPanel.canCreateDirectories = true
         exportPanel.begin { (result) in
-            if result == NSFileHandlingPanelOKButton {
+            if result == .OK {
                 let url = exportPanel.url!
                 
                 for index in 0..<modelArray.count {
@@ -72,17 +72,18 @@ class IconsModelsManager {
                             let alert = NSAlert.init()
                             alert.messageText = "Not find source image with path:\n\(model.sourceUrl.absoluteString)"
                             alert.addButton(withTitle: "Sure")
-                            alert.beginSheetModal(for: NSApplication.shared().mainWindow!, completionHandler:nil)
+                            alert.beginSheetModal(for: NSApplication.shared.mainWindow!, completionHandler:nil)
                             return;
                         }
                         
-                        let scale = Double((NSApplication.shared().windows.last?.backingScaleFactor)!)
+                        let scale = Double(NSApplication.shared.windows.last?.backingScaleFactor ?? 0)
+//                        Double((NSApplication.shared().windows.last?.backingScaleFactor)!)
                         let image = ResourcesManager.createImage(width: width!/scale, height:width!/scale, image: sourceImage!)
                         let imageData = image.tiffRepresentation
                         
                         let bitRep:NSBitmapImageRep = NSBitmapImageRep.init(data: imageData!)!
                         
-                        let resultData = bitRep.representation(using: NSBitmapImageFileType.PNG, properties: Dictionary.init())
+                        let resultData = bitRep.representation(using: .png, properties: Dictionary.init())
                         
                         do {
                             try resultData?.write(to: saveUrl)

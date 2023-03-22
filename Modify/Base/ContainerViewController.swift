@@ -20,16 +20,16 @@ class ContainerViewController: NSViewController, DragDropDelegate {
         let artworkVC = ArtworkViewController(nibName: "ArtworkViewController", bundle: nil)
         let defaultVC = DefaultViewController(nibName: "DefaultViewController", bundle: nil)
         
-        iconVC?.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
-        artworkVC?.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
-        defaultVC?.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
+        iconVC.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
+        artworkVC.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
+        defaultVC.view.frame = NSRect.init(origin: .zero, size: self.view.bounds.size)
         
-        self.addChildViewController(iconVC!)
-        self.addChildViewController(artworkVC!)
-        self.addChildViewController(defaultVC!)
+        self.addChild(iconVC)
+        self.addChild(artworkVC)
+        self.addChild(defaultVC)
         
         self.currentVC = iconVC
-        self.view.addSubview((iconVC?.view)!)
+        self.view.addSubview(iconVC.view)
         
         self.view.addObserver(self, forKeyPath: "frame", options: [.new, .old], context: nil)
     }
@@ -42,9 +42,9 @@ class ContainerViewController: NSViewController, DragDropDelegate {
     }
     
     public func setCurrentIndex(index num:NSInteger, block:@escaping ()->Void) {
-        if currentVC! != self.childViewControllers[num] {
-            self.transition(from: currentVC!, to: self.childViewControllers[num], options: [NSViewControllerTransitionOptions.init(rawValue: 0)], completionHandler: {
-                self.currentVC = self.childViewControllers[num] as? ContentViewController
+        if currentVC! != self.children[num] {
+            self.transition(from: currentVC!, to: self.children[num], options: [NSViewController.TransitionOptions.init(rawValue: 0)], completionHandler: {
+                self.currentVC = self.children[num] as? ContentViewController
                 block()
             })
         }

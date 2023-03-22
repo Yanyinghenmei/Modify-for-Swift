@@ -45,7 +45,7 @@ class DefaultModelsManager {
         exportPanel.allowsMultipleSelection = false
         exportPanel.canCreateDirectories = true
         exportPanel.begin { (result) in
-            if result == NSFileHandlingPanelOKButton {
+            if result.rawValue == NSFileHandlingPanelOKButton {
                 let url = exportPanel.url!
                 
                 for index in 0..<modelArray.count {
@@ -53,7 +53,8 @@ class DefaultModelsManager {
                     
                     let imageName = "\(model.name).png"
                     let saveUrl = url.appendingPathComponent(imageName)
-                    let scale = Double((NSApplication.shared().windows.last?.backingScaleFactor)!)
+                    let scale = Double(NSApplication.shared.windows.last?.backingScaleFactor ?? 0)
+//                    let scale = Double((NSApplication.shared().windows.last?.backingScaleFactor)!)
                     
                     var width:Double?
                     var height:Double?
@@ -71,7 +72,8 @@ class DefaultModelsManager {
                     
                     let bitRep:NSBitmapImageRep = NSBitmapImageRep.init(data: imageData!)!
                     
-                    let resultData = bitRep.representation(using: NSBitmapImageFileType.PNG, properties: Dictionary.init())
+                    let resultData = bitRep.representation(using: .png, properties: Dictionary.init())
+//                    let resultData = bitRep.representation(using: NSBitmapImageFileType.PNG, properties: Dictionary.init())
                     
                     do {
                         try resultData?.write(to: saveUrl)

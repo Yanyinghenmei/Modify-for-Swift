@@ -43,7 +43,7 @@ class ArtworkViewController: ContentViewController {
         topView.layer?.backgroundColor = NSColor.white.cgColor
         collectionView.layer?.backgroundColor = NSColor.init(srgbRed: 249/255.00, green: 249/255.00, blue: 249/255.00, alpha: 1).cgColor
 
-        collectionView.register(ArtworkCollectionItem.self, forItemWithIdentifier: "Artwork")
+        collectionView.register(ArtworkCollectionItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "Artwork"))
     }
     
     @IBAction func exportClick(_ sender: NSButton) {
@@ -62,7 +62,7 @@ extension ArtworkViewController: NSCollectionViewDataSource {
         
         var model = modelArray.object(at: indexPath.item) as! ArtworkImageModel
         
-        let item = collectionView.makeItem(withIdentifier: "ArtworkCollectionItem", for: indexPath) as! ArtworkCollectionItem
+        let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.init(rawValue: "ArtworkCollectionItem"), for: indexPath) as! ArtworkCollectionItem
         item.imgView?.image = model.minImage
         item.nameLabel.stringValue = model.name
         item.widthLabel.stringValue = "\(model.width)"

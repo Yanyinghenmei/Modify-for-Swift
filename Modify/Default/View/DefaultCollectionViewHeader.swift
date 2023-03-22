@@ -19,7 +19,8 @@ class DefaultCollectionViewHeader: NSView {
         super.draw(dirtyRect)
         
         NSColor.white.set()
-        NSRectFill(dirtyRect)
+//        NSRectFill(dirtyRect)
+        __NSRectFill(dirtyRect)
     }
     
     @IBAction func isPortraitChange(_ sender: NSPopUpButton) {
